@@ -1,22 +1,30 @@
 import './formulario-de-evento.style.css'
 import { TituloFomulario } from '../TituloFomulario'
-import {CampoDeFormulario} from '../CampoDeFormulario'
+import { CampoDeFormulario } from '../CampoDeFormulario'
 import { Label } from '../Label'
-import {CampoDeEntrada} from '../CampoDeEntrada'
+import { CampoDeEntrada } from '../CampoDeEntrada'
 
 
-export function FormularioDeEventos () {
+export function FormularioDeEventos() {
     return (
         <form className='form-evento'>
             <TituloFomulario>
                 Preencha para criar um evento:
             </TituloFomulario>
-            <CampoDeFormulario>
-                <Label htmlFor="Nome">
-                    Qual o nome do evento ?
-                </Label>
-                <CampoDeEntrada type="text" id='nome' placeholder='Summer dev hits' name='nomeEvento' />
-            </CampoDeFormulario>
+            <div className='campos'>
+                <CampoDeFormulario>
+                    <Label htmlFor="nomeEvento">
+                        Qual o nome do evento ?
+                    </Label>
+                    <CampoDeEntrada type="text" id='nomeEvento' placeholder='Summer dev hits' name='nomeEvento' />
+                </CampoDeFormulario>
+                <CampoDeFormulario>
+                    <Label htmlFor="dataEvento">
+                        Data do evento
+                    </Label>
+                    <CampoDeEntrada type="date" id='dataEvento' name='dataEvento' />
+                </CampoDeFormulario>
+            </div>
         </form>
     )
 } FormularioDeEventos
