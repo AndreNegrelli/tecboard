@@ -12,3 +12,8 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.actions{
+  margin-top: 32px;
+  text-align: center;
+}
